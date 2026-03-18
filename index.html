@@ -19,27 +19,23 @@
         font-size: 3em;
         color: #f0f0f5; /* soft off-white */
         margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
-    h2:nth-of-type(1) {
-        color: #ffc0cb; /* soft pink */
-    }
-    h2:nth-of-type(2) {
-        color: #d8b4ff; /* soft lavender */
-    }
-    h2:nth-of-type(3) {
-        color: #fff9c4; /* soft yellow */
-    }
-    h2:nth-of-type(4) {
-        color: #a0e7e5; /* soft light blue */
-    }
+    h2.heading-pink { color: #ffb6c1; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+    h2.heading-lavender { color: #c9a0ff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+    h2.heading-yellow { color: #fffacd; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+    h2.heading-blue { color: #82cfff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+
     p {
         max-width: 600px;
         margin: 10px auto;
         line-height: 1.6;
         font-size: 1.1em;
+        color: #1a3d6d; /* dark blue text */
     }
     .card {
-        background: rgba(255,255,255,0.1);
+        background: #cce7ff;  /* soft baby blue */
+        color: #1a3d6d;       /* text color rhymes with blue */
         padding: 30px;
         border-radius: 20px;
         margin: 20px auto;
@@ -50,14 +46,14 @@
         padding: 12px 25px;
         border: none;
         border-radius: 25px;
-        background: #ff6b81;
-        color: white;
+        background: #82cfff;  /* pastel baby blue */
+        color: #1a3d6d;       /* dark blue text */
         font-size: 1em;
         cursor: pointer;
         margin-top: 20px;
     }
     button:hover {
-        background: #ff4757;
+        background: #5bb0e5;  /* slightly darker blue on hover */
     }
     input {
         padding:10px;
@@ -66,6 +62,13 @@
         font-size:1em;
         margin-top: 10px;
         text-align: center;
+    }
+    a {
+        color: #1a3d6d;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 </style>
 </head>
@@ -89,7 +92,7 @@
 </section>
 
 <section class="card">
-    <h2>What I did</h2>
+    <h2 class="heading-pink">What I did</h2>
     <p>
         I’m really sorry I overstepped by doing all that. I shouldn’t have, and I take full responsibility for it.  
         It wasn’t my place, and I understand how that made everything worse.
@@ -108,7 +111,7 @@
 </section>
 
 <section class="card">
-    <h2>What I understand now</h2>
+    <h2 class="heading-lavender">What I understand now</h2>
     <p>
         I broke your trust—not just once, but twice.
         And I know trust is not something I can ask for back, it’s something I have to earn.
@@ -119,7 +122,7 @@
 </section>
 
 <section class="card">
-    <h2>What you mean to me</h2>
+    <h2 class="heading-yellow">What you mean to me</h2>
     <p>
         I miss you. I miss our friendship, our conversations, and the comfort we had.
         Losing that has made me realize how much you truly mean to me.
@@ -127,7 +130,7 @@
 </section>
 
 <section class="card">
-    <h2>No pressure</h2>
+    <h2 class="heading-blue">No pressure</h2>
     <p>
         I’m not expecting you to forgive me right away—or at all.
         I just needed you to know that I’m truly sorry.
@@ -140,7 +143,12 @@
     <button onclick="showMessage()">Click if you want to hear one more thing</button>
     <p id="extraMessage" style="display:none; margin-top:20px;">
         Thank you for the time, trust, and friendship you gave me.
-        I’ll always be grateful for you and everything we shared
+        I’ll always be grateful for you 
+        You came into my life and made it better
+        You were always that extra push i didn't know i needed
+        You motivated me to do better and be better everday
+        Thank you for everything Wema 
+        You've been an exemplary friend ❤️
         I hope, in time, we can move past this and try to work our way back to how we were before.
     </p>
 </section>
