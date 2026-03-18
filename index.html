@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #1e1e2f, #2c2c54);
+        color: #fff;
+        text-align: center;
+    }
+    section {
+        padding: 60px 20px;
+    }
+    h1 {
+        font-size: 3em;
+        color: #f0f0f5; /* soft off-white */
+        margin-bottom: 10px;
+    }
+    h2:nth-of-type(1) {
+        color: #ffc0cb; /* soft pink */
+    }
+    h2:nth-of-type(2) {
+        color: #d8b4ff; /* soft lavender */
+    }
+    h2:nth-of-type(3) {
+        color: #fff9c4; /* soft yellow */
+    }
+    h2:nth-of-type(4) {
+        color: #a0e7e5; /* soft light blue */
+    }
+    p {
+        max-width: 600px;
+        margin: 10px auto;
+        line-height: 1.6;
+        font-size: 1.1em;
+    }
+    .card {
+        background: rgba(255,255,255,0.1);
+        padding: 30px;
+        border-radius: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+        backdrop-filter: blur(10px);
+    }
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        background: #ff6b81;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button:hover {
+        background: #ff4757;
+    }
+    input {
+        padding:10px;
+        border-radius:10px;
+        border:none;
+        font-size:1em;
+        margin-top: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<!-- Passcode Section -->
+<section id="passcodeSection">
+    <h1>Enter the passcode to continue</h1>
+    <input type="password" id="passcodeInput" placeholder="Enter code">
+    <br>
+    <button onclick="checkPasscode()">Submit</button>
+    <p id="errorMsg" style="color:#ff6b81; display:none; margin-top:10px;">Wrong passcode, try again.</p>
+</section>
+
+<!-- Main Website Content -->
+<div id="mainContent" style="display:none;">
+
+<section>
+    <h1>I'm really sorry...</h1>
+    <p>I know I hurt you, and I hate that I’m the reason you feel this way.</p>
+</section>
+
+<section class="card">
+    <h2>What I did</h2>
+    <p>
+        I’m really sorry I overstepped by doing all that. I shouldn’t have, and I take full responsibility for it.  
+        It wasn’t my place, and I understand how that made everything worse.
+    </p>
+    <p>
+        I’m also sorry for how I handled it after—you deserved honesty, and instead I avoided things and didn’t say everything clearly.
+    </p>
+    <p>
+        I never wanted it to get to a point where you’d question our friendship, because it genuinely means so much to me.  
+        I may not always say the right things, but I would never intentionally hurt you or your relationship.
+    </p>
+    <p>
+        I’m really sorry, Michelle.  
+        I truly hope, in time, we can move past this and try to work our way back to how we were before.
+    </p>
+</section>
+
+<section class="card">
+    <h2>What I understand now</h2>
+    <p>
+        I broke your trust—not just once, but twice.
+        And I know trust is not something I can ask for back, it’s something I have to earn.
+    </p>
+    <p>
+        You deserved honesty, loyalty, and respect from me, and I didn’t give you that in that moment.
+    </p>
+</section>
+
+<section class="card">
+    <h2>What you mean to me</h2>
+    <p>
+        I miss you. I miss our friendship, our conversations, and the comfort we had.
+        Losing that has made me realize how much you truly mean to me.
+    </p>
+</section>
+
+<section class="card">
+    <h2>No pressure</h2>
+    <p>
+        I’m not expecting you to forgive me right away—or at all.
+        I just needed you to know that I’m truly sorry.
+    </p>
+    <p>
+        If you ever decide to give me another chance, I’ll do better.
+        And if you don’t, I’ll still respect your feelings.
+    </p>
+
+    <button onclick="showMessage()">Click if you want to hear one more thing</button>
+    <p id="extraMessage" style="display:none; margin-top:20px;">
+        Thank you for the time, trust, and friendship you gave me.
+        I’ll always be grateful for you 🤍
+        I hope, in time, we can move past this and try to work our way back to how we were before.
+    </p>
+</section>
+
+</div>
+
+<script>
+const correctPasscode = "260604"; // Your numeric passcode
+
+function checkPasscode() {
+    const entered = document.getElementById("passcodeInput").value;
+    if(entered === correctPasscode) {
+        document.getElementById("passcodeSection").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+    } else {
+        document.getElementById("errorMsg").style.display = "block";
+    }
+}
+
+function showMessage() {
+    document.getElementById("extraMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
